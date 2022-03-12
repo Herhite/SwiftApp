@@ -24,6 +24,7 @@
 		201B78A427DB335B005D76EF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201B78A327DB335B005D76EF /* TestViewController.swift */; };
 		20B084B927DC3743002374E9 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B084B827DC3743002374E9 /* UIImage+Extension.swift */; };
 		20B084BB27DC3A2C002374E9 /* ZADefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B084BA27DC3A2C002374E9 /* ZADefine.swift */; };
+		20B084C327DC773D002374E9 /* AdvertiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B084C227DC773D002374E9 /* AdvertiseViewController.swift */; };
 		A335381FA7B2582499595E94 /* Pods_SwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4844C5C618110DC09DDB80C /* Pods_SwiftAppTests.framework */; };
 		BEA426A9C2949EB66FC5E309 /* Pods_SwiftApp_SwiftAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFE7376409C52D1CD923E7C /* Pods_SwiftApp_SwiftAppUITests.framework */; };
 		E10D99C6E4E8A955569ECBBF /* Pods_SwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6189E82C25BB3D4A584B13 /* Pods_SwiftApp.framework */; };
@@ -70,6 +71,7 @@
 		201B78A327DB335B005D76EF /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		20B084B827DC3743002374E9 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		20B084BA27DC3A2C002374E9 /* ZADefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZADefine.swift; sourceTree = "<group>"; };
+		20B084C227DC773D002374E9 /* AdvertiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertiseViewController.swift; sourceTree = "<group>"; };
 		3A6189E82C25BB3D4A584B13 /* Pods_SwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		606D5FF22734E4AE4B2E3BF9 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		7ADD2D97D111020D67D264E4 /* Pods-SwiftAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftAppTests/Pods-SwiftAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		201B786027DAE3F1005D76EF /* SwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				20B084C127DC773D002374E9 /* AdvertiseViewController */,
 				20B084B727DC3648002374E9 /* Extention */,
 				201B786127DAE3F1005D76EF /* AppDelegate.swift */,
 				201B786527DAE3F1005D76EF /* ViewController.swift */,
@@ -182,6 +185,14 @@
 				20B084BA27DC3A2C002374E9 /* ZADefine.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		20B084C127DC773D002374E9 /* AdvertiseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20B084C227DC773D002374E9 /* AdvertiseViewController.swift */,
+			);
+			path = AdvertiseViewController;
 			sourceTree = "<group>";
 		};
 		3C9D74BAC9E3294AFC1E0113 /* Pods */ = {
@@ -453,6 +464,7 @@
 				201B78A227DB321D005D76EF /* CustomNavigationController.swift in Sources */,
 				201B789F27DB1A88005D76EF /* FourthViewController.swift in Sources */,
 				201B789727DB1A45005D76EF /* ZABaseViewController.swift in Sources */,
+				20B084C327DC773D002374E9 /* AdvertiseViewController.swift in Sources */,
 				201B789B27DB1A71005D76EF /* SecondViewController.swift in Sources */,
 				201B789527DB1A0B005D76EF /* ZATabBarController.swift in Sources */,
 				201B789D27DB1A7E005D76EF /* ThirdViewController.swift in Sources */,

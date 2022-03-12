@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Thread.sleep(forTimeInterval: 3) //延长启动页时间
+//        Thread.sleep(forTimeInterval: 3) //延长启动页时间
         window = UIWindow.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
         window?.backgroundColor = .white
-        window?.rootViewController = ZATabBarController()
+        window?.rootViewController = AdvertiseViewController()
         window?.makeKeyAndVisible()
         return true
     }
