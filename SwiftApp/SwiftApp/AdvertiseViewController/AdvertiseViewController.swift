@@ -12,7 +12,7 @@ class AdvertiseViewController: ZABaseViewController {
     /// 懒加载 定时器
     lazy var timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global())
     /// 倒计时时间
-    var seconds = 5
+    var seconds = 1
     let timerLabel = UILabel.init(frame: CGRect.init(x: 10, y: 150, width: SCREEN_WIDTH, height: 50))
     
     override func viewDidLoad() {

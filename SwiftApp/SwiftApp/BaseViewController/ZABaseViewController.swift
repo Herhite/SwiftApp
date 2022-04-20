@@ -51,12 +51,12 @@ class ZABaseViewController: UIViewController {
 ////            spacer.width = -10;
 //            self .navigationItem.leftBarButtonItems = [leftBarBtn]
 //        }
-        navigationItem.backBarButtonItem?.tintColor = .black
-        
-        // 设置导航栏背景为透明色图片
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        // 设置导航栏阴影为透明色图片
-        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationItem.backBarButtonItem?.tintColor = .black
+//        
+//        // 设置导航栏背景为透明色图片
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        // 设置导航栏阴影为透明色图片
+//        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     //返回按钮点击响应

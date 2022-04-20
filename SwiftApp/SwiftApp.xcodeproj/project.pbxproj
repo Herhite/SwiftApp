@@ -25,6 +25,7 @@
 		20B084B927DC3743002374E9 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B084B827DC3743002374E9 /* UIImage+Extension.swift */; };
 		20B084BB27DC3A2C002374E9 /* ZADefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B084BA27DC3A2C002374E9 /* ZADefine.swift */; };
 		20B084C327DC773D002374E9 /* AdvertiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B084C227DC773D002374E9 /* AdvertiseViewController.swift */; };
+		46DFFCFF280FE0EC00C90869 /* MineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DFFCFE280FE0EC00C90869 /* MineTableViewCell.swift */; };
 		A335381FA7B2582499595E94 /* Pods_SwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4844C5C618110DC09DDB80C /* Pods_SwiftAppTests.framework */; };
 		BEA426A9C2949EB66FC5E309 /* Pods_SwiftApp_SwiftAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFE7376409C52D1CD923E7C /* Pods_SwiftApp_SwiftAppUITests.framework */; };
 		E10D99C6E4E8A955569ECBBF /* Pods_SwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6189E82C25BB3D4A584B13 /* Pods_SwiftApp.framework */; };
@@ -73,6 +74,7 @@
 		20B084BA27DC3A2C002374E9 /* ZADefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZADefine.swift; sourceTree = "<group>"; };
 		20B084C227DC773D002374E9 /* AdvertiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertiseViewController.swift; sourceTree = "<group>"; };
 		3A6189E82C25BB3D4A584B13 /* Pods_SwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46DFFCFE280FE0EC00C90869 /* MineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTableViewCell.swift; sourceTree = "<group>"; };
 		606D5FF22734E4AE4B2E3BF9 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		7ADD2D97D111020D67D264E4 /* Pods-SwiftAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftAppTests/Pods-SwiftAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7DFE7376409C52D1CD923E7C /* Pods_SwiftApp_SwiftAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp_SwiftAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +144,7 @@
 				201B789827DB1A69005D76EF /* FirstController.swift */,
 				201B789A27DB1A71005D76EF /* SecondViewController.swift */,
 				201B789C27DB1A7E005D76EF /* ThirdViewController.swift */,
-				201B789E27DB1A88005D76EF /* FourthViewController.swift */,
+				465F215D280FE4F800B5A7FB /* Mine */,
 				201B78A327DB335B005D76EF /* TestViewController.swift */,
 				201B786A27DAE3F5005D76EF /* Assets.xcassets */,
 				201B786C27DAE3F5005D76EF /* LaunchScreen.storyboard */,
@@ -206,6 +208,31 @@
 				020F54374222A8FAB04A4FF5 /* Pods-SwiftAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		465F215D280FE4F800B5A7FB /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				46DFFCFD280FE0C700C90869 /* View */,
+				465F215E280FE50200B5A7FB /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		465F215E280FE50200B5A7FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				201B789E27DB1A88005D76EF /* FourthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46DFFCFD280FE0C700C90869 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46DFFCFE280FE0EC00C90869 /* MineTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8800F22C50FA5B5CC7888259 /* Frameworks */ = {
@@ -456,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46DFFCFF280FE0EC00C90869 /* MineTableViewCell.swift in Sources */,
 				201B78A427DB335B005D76EF /* TestViewController.swift in Sources */,
 				201B789927DB1A69005D76EF /* FirstController.swift in Sources */,
 				201B786627DAE3F1005D76EF /* ViewController.swift in Sources */,

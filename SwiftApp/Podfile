@@ -7,6 +7,7 @@ target 'SwiftApp' do
 
   # Pods for SwiftApp
   pod 'Alamofire'
+  pod 'SnapKit'
 
   target 'SwiftAppTests' do
     inherit! :search_paths
