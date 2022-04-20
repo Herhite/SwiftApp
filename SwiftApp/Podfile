@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '12.0'
+ platform :ios, '10.0'
 
 target 'SwiftApp' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,7 +8,14 @@ target 'SwiftApp' do
   # Pods for SwiftApp
   pod 'Alamofire'
   pod 'SnapKit'
-
+  pod 'Moya'
+  pod 'HandyJSON'
+  pod 'Kingfisher'
+  pod 'MBProgressHUD'
+  pod 'Reusable'
+#  pod 'LLCycleScrollView'
+  pod 'MJRefresh'
+  
   target 'SwiftAppTests' do
     inherit! :search_paths
     # Pods for testing

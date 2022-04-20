@@ -60,6 +60,14 @@ class FourthViewController: ZABaseViewController {
 
 extension FourthViewController:UITableViewDelegate,UITableViewDataSource{
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y >= 20 {
+            navigationController?.barStyle(.normal)
+        }else{
+            navigationController?.barStyle(.clear)
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return myArray.count
     }
