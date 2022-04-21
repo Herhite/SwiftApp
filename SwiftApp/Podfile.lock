@@ -13,6 +13,12 @@ PODS:
     - Reusable/View (= 4.1.2)
   - Reusable/Storyboard (4.1.2)
   - Reusable/View (4.1.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
@@ -23,6 +29,8 @@ DEPENDENCIES:
   - MJRefresh
   - Moya
   - Reusable
+  - RxCocoa
+  - RxSwift
   - SnapKit
 
 SPEC REPOS:
@@ -34,6 +42,9 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - Reusable
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
 
 SPEC CHECKSUMS:
@@ -44,8 +55,11 @@ SPEC CHECKSUMS:
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: ba2ac3240b934a81d02d0b2e4eaa7e3e5d7f487f
+PODFILE CHECKSUM: d6d1c3b2adfd95a43ed2edba92dce436f9de3984
 
 COCOAPODS: 1.10.1

@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class FourthViewController: ZABaseViewController {
 
+    let musicListViewModel = MusicListViewModel()
+    
     private lazy var myArray: Array = {
         return [[["icon":"mine_vip", "title": "我的VIP"],
                  ["icon":"mine_coin", "title": "充值妖气币"]],
@@ -32,8 +35,20 @@ class FourthViewController: ZABaseViewController {
         super.viewDidLoad()
 
         view.addSubview(table)
+//        view.addSubview(musicTable)
         // Do any additional setup after loading the view.
     }
+    
+    lazy var musicTable : UITableView = {
+       var tmpTable = UITableView()
+        tmpTable.rowHeight = 50
+        tmpTable.backgroundColor = .clear
+        tmpTable.separatorStyle = .none
+        tmpTable.dataSource = self
+        tmpTable.delegate = self
+        tmpTable.frame = .init(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        return tmpTable
+    }()
     
     lazy var table : UITableView = {
        var tmpTable = UITableView()
@@ -69,21 +84,33 @@ extension FourthViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        if tableView == musicTable {
+            return 1
+        }
         return myArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == musicTable {
+            return musicListViewModel.data.count
+        }
         return myArray[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MineTableViewCell.dequeCell(table: tableView)
-        cell.iconImageV.image = UIImage.init(named: myArray[indexPath.section][indexPath.row]["icon"]!)
-        cell.nameLabel.text = myArray[indexPath.section][indexPath.row]["title"]!
-        cell.accessoryType = .disclosureIndicator //箭头
-        //checkmark ✅
-        //detailDisclosureButton ?
-        //disclosureIndicator 箭头
+        if tableView == musicTable {
+            cell.nameLabel.text = musicListViewModel.data[indexPath.row].name
+            cell.singerLabel.text = musicListViewModel.data[indexPath.row].singer
+        }else{
+            cell.iconImageV.image = UIImage.init(named: myArray[indexPath.section][indexPath.row]["icon"]!)
+            cell.nameLabel.text = myArray[indexPath.section][indexPath.row]["title"]!
+            cell.accessoryType = .disclosureIndicator //箭头
+            //checkmark ✅
+            //detailDisclosureButton ?
+            //disclosureIndicator 箭头
+        }
+       
         
         return cell
     }

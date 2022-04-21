@@ -33,7 +33,15 @@ class MineTableViewCell: UITableViewCell {
         nameLabel.snp.makeConstraints { make in
             make.centerY.equalTo(iconImageV)
             make.leading.equalTo(iconImageV.snp.trailing).offset(10)
-            make.trailing.equalTo(-80)
+            make.width.equalTo(SCREEN_WIDTH/2-45)
+            make.height.equalTo(40)
+        }
+        
+        contentView.addSubview(singerLabel)
+        singerLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(iconImageV)
+            make.width.equalTo(SCREEN_WIDTH/2 - 10)
+            make.trailing.equalTo(-10)
             make.height.equalTo(40)
         }
         
@@ -64,6 +72,13 @@ class MineTableViewCell: UITableViewCell {
     }()
     
     public lazy var nameLabel : UILabel = {
+        var label = UILabel.init()
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 15)
+        return label
+    }()
+    
+    public lazy var singerLabel : UILabel = {
         var label = UILabel.init()
         label.textColor = .black
         label.font = .systemFont(ofSize: 15)

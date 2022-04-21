@@ -27,6 +27,9 @@
 		20B084C327DC773D002374E9 /* AdvertiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B084C227DC773D002374E9 /* AdvertiseViewController.swift */; };
 		465F2163281006E900B5A7FB /* SecondTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F2162281006E900B5A7FB /* SecondTabCollectionViewCell.swift */; };
 		465F2165281017D200B5A7FB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F2164281017D200B5A7FB /* UIColor+Extension.swift */; };
+		465F216D2811365A00B5A7FB /* ThemeStyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F216C2811365A00B5A7FB /* ThemeStyleConfig.swift */; };
+		465F216F2811394800B5A7FB /* ReadingModeAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F216E2811394800B5A7FB /* ReadingModeAdjuster.swift */; };
+		465F217228114F0000B5A7FB /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F217128114F0000B5A7FB /* MusicListViewModel.swift */; };
 		46DFFCFF280FE0EC00C90869 /* MineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DFFCFE280FE0EC00C90869 /* MineTableViewCell.swift */; };
 		A335381FA7B2582499595E94 /* Pods_SwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4844C5C618110DC09DDB80C /* Pods_SwiftAppTests.framework */; };
 		BEA426A9C2949EB66FC5E309 /* Pods_SwiftApp_SwiftAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFE7376409C52D1CD923E7C /* Pods_SwiftApp_SwiftAppUITests.framework */; };
@@ -78,6 +81,9 @@
 		3A6189E82C25BB3D4A584B13 /* Pods_SwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		465F2162281006E900B5A7FB /* SecondTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabCollectionViewCell.swift; sourceTree = "<group>"; };
 		465F2164281017D200B5A7FB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		465F216C2811365A00B5A7FB /* ThemeStyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStyleConfig.swift; sourceTree = "<group>"; };
+		465F216E2811394800B5A7FB /* ReadingModeAdjuster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingModeAdjuster.swift; sourceTree = "<group>"; };
+		465F217128114F0000B5A7FB /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
 		46DFFCFE280FE0EC00C90869 /* MineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTableViewCell.swift; sourceTree = "<group>"; };
 		606D5FF22734E4AE4B2E3BF9 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		7ADD2D97D111020D67D264E4 /* Pods-SwiftAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftAppTests/Pods-SwiftAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,11 +151,10 @@
 				201B786127DAE3F1005D76EF /* AppDelegate.swift */,
 				201B786527DAE3F1005D76EF /* ViewController.swift */,
 				201B78A027DB31E4005D76EF /* BaseViewController */,
-				201B789827DB1A69005D76EF /* FirstController.swift */,
-				201B789C27DB1A7E005D76EF /* ThirdViewController.swift */,
+				465F21692811360900B5A7FB /* Third */,
+				465F21662810EDCA00B5A7FB /* First */,
 				465F215F281005D800B5A7FB /* List */,
 				465F215D280FE4F800B5A7FB /* Mine */,
-				201B78A327DB335B005D76EF /* TestViewController.swift */,
 				201B786A27DAE3F5005D76EF /* Assets.xcassets */,
 				201B786C27DAE3F5005D76EF /* LaunchScreen.storyboard */,
 				201B786F27DAE3F5005D76EF /* Info.plist */,
@@ -190,6 +195,8 @@
 				20B084B827DC3743002374E9 /* UIImage+Extension.swift */,
 				465F2164281017D200B5A7FB /* UIColor+Extension.swift */,
 				20B084BA27DC3A2C002374E9 /* ZADefine.swift */,
+				465F216C2811365A00B5A7FB /* ThemeStyleConfig.swift */,
+				465F216E2811394800B5A7FB /* ReadingModeAdjuster.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 		465F215D280FE4F800B5A7FB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				465F21732811533A00B5A7FB /* ViewModel */,
 				46DFFCFD280FE0C700C90869 /* View */,
 				465F215E280FE50200B5A7FB /* Controller */,
 			);
@@ -255,6 +263,71 @@
 				201B789A27DB1A71005D76EF /* SecondViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		465F21662810EDCA00B5A7FB /* First */ = {
+			isa = PBXGroup;
+			children = (
+				465F21682810EDEC00B5A7FB /* View */,
+				465F21672810EDDB00B5A7FB /* Controller */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		465F21672810EDDB00B5A7FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				201B789827DB1A69005D76EF /* FirstController.swift */,
+				201B78A327DB335B005D76EF /* TestViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		465F21682810EDEC00B5A7FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		465F21692811360900B5A7FB /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				465F217028114EE400B5A7FB /* ViewModel */,
+				465F216B2811361E00B5A7FB /* View */,
+				465F216A2811361400B5A7FB /* Controller */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		465F216A2811361400B5A7FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				201B789C27DB1A7E005D76EF /* ThirdViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		465F216B2811361E00B5A7FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		465F217028114EE400B5A7FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		465F21732811533A00B5A7FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				465F217128114F0000B5A7FB /* MusicListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		46DFFCFD280FE0C700C90869 /* View */ = {
@@ -513,7 +586,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465F217228114F0000B5A7FB /* MusicListViewModel.swift in Sources */,
 				46DFFCFF280FE0EC00C90869 /* MineTableViewCell.swift in Sources */,
+				465F216F2811394800B5A7FB /* ReadingModeAdjuster.swift in Sources */,
 				201B78A427DB335B005D76EF /* TestViewController.swift in Sources */,
 				201B789927DB1A69005D76EF /* FirstController.swift in Sources */,
 				201B786627DAE3F1005D76EF /* ViewController.swift in Sources */,
@@ -527,6 +602,7 @@
 				201B789B27DB1A71005D76EF /* SecondViewController.swift in Sources */,
 				201B789527DB1A0B005D76EF /* ZATabBarController.swift in Sources */,
 				201B789D27DB1A7E005D76EF /* ThirdViewController.swift in Sources */,
+				465F216D2811365A00B5A7FB /* ThemeStyleConfig.swift in Sources */,
 				465F2163281006E900B5A7FB /* SecondTabCollectionViewCell.swift in Sources */,
 				20B084BB27DC3A2C002374E9 /* ZADefine.swift in Sources */,
 			);
