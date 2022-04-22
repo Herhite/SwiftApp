@@ -40,3 +40,36 @@ struct MusicListViewModel {
     ])
     
 }
+
+struct MusicCollectionViewModel{
+    var  data = Observable.just([
+        Music(name: "断桥残雪", singer: "许嵩"),
+        Music(name: "如果当时", singer: "vae"),
+        Music(name: "医生", singer: "许嵩"),
+        Music(name: "送你的独白", singer: "许嵩"),
+        Music(name: "情侣装", singer: "vae"),
+        Music(name: "我想牵着你的手", singer: "许嵩"),
+        Music(name: "想象之中", singer: "许嵩"),
+        Music(name: "微博控", singer: "vae"),
+        Music(name: "医生", singer: "许嵩"),
+        Music(name: "散场电影", singer: "许嵩"),
+        Music(name: "白马非马", singer: "vae"),
+        Music(name: "尘世美", singer: "许嵩"),
+        Music(name: "你若成风", singer: "许嵩"),
+        Music(name: "我的baby", singer: "vae"),
+        Music(name: "我很喜欢", singer: "许嵩"),
+        Music(name: "多余的解释", singer: "许嵩"),
+        Music(name: "有何不可", singer: "vae"),
+        Music(name: "坏孩子", singer: "许嵩"),
+        Music(name: "清明雨上", singer: "许嵩"),
+        Music(name: "认错", singer: "vae"),
+        Music(name: "城府", singer: "许嵩"),
+        Music(name: "星座书上", singer: "许嵩"),
+        Music(name: "灰色头像", singer: "vae"),
+        Music(name: "不煽情", singer: "许嵩"),
+        Music(name: "单人旅途", singer: "许嵩"),
+        Music(name: "半城烟沙", singer: "vae"),
+        Music(name: "素颜", singer: "许嵩"),
+    ])
+    
+}

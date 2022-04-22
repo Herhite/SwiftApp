@@ -56,5 +56,20 @@ extension SecondViewController:UICollectionViewDataSource,UICollectionViewDelega
         cell.nameLabel.text = String(indexPath.item)
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let num = indexPath.row % 3
+        switch num {
+        case 0:
+            let sourceVC = RXDataSourceViewController()
+            navigationController?.pushViewController(sourceVC, animated: true)
+        case 1:
+            let testVc = RXTableViewController()
+            navigationController?.pushViewController(testVc, animated: true)
+        default:
+            let sourceVC = RXCollectionViewController()
+            navigationController?.pushViewController(sourceVC, animated: true)
+        }
+    }
+    
     
 }

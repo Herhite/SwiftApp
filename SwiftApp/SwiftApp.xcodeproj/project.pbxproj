@@ -30,6 +30,9 @@
 		465F216D2811365A00B5A7FB /* ThemeStyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F216C2811365A00B5A7FB /* ThemeStyleConfig.swift */; };
 		465F216F2811394800B5A7FB /* ReadingModeAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F216E2811394800B5A7FB /* ReadingModeAdjuster.swift */; };
 		465F217228114F0000B5A7FB /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F217128114F0000B5A7FB /* MusicListViewModel.swift */; };
+		465F21752811610400B5A7FB /* RXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F21742811610400B5A7FB /* RXTableViewController.swift */; };
+		465F21772812426900B5A7FB /* RXDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F21762812426900B5A7FB /* RXDataSourceViewController.swift */; };
+		465F2179281253B800B5A7FB /* RXCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F2178281253B800B5A7FB /* RXCollectionViewController.swift */; };
 		46DFFCFF280FE0EC00C90869 /* MineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DFFCFE280FE0EC00C90869 /* MineTableViewCell.swift */; };
 		A335381FA7B2582499595E94 /* Pods_SwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4844C5C618110DC09DDB80C /* Pods_SwiftAppTests.framework */; };
 		BEA426A9C2949EB66FC5E309 /* Pods_SwiftApp_SwiftAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFE7376409C52D1CD923E7C /* Pods_SwiftApp_SwiftAppUITests.framework */; };
@@ -84,6 +87,9 @@
 		465F216C2811365A00B5A7FB /* ThemeStyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStyleConfig.swift; sourceTree = "<group>"; };
 		465F216E2811394800B5A7FB /* ReadingModeAdjuster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingModeAdjuster.swift; sourceTree = "<group>"; };
 		465F217128114F0000B5A7FB /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
+		465F21742811610400B5A7FB /* RXTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXTableViewController.swift; sourceTree = "<group>"; };
+		465F21762812426900B5A7FB /* RXDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXDataSourceViewController.swift; sourceTree = "<group>"; };
+		465F2178281253B800B5A7FB /* RXCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXCollectionViewController.swift; sourceTree = "<group>"; };
 		46DFFCFE280FE0EC00C90869 /* MineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTableViewCell.swift; sourceTree = "<group>"; };
 		606D5FF22734E4AE4B2E3BF9 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		7ADD2D97D111020D67D264E4 /* Pods-SwiftAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftAppTests/Pods-SwiftAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +267,9 @@
 			isa = PBXGroup;
 			children = (
 				201B789A27DB1A71005D76EF /* SecondViewController.swift */,
+				465F21742811610400B5A7FB /* RXTableViewController.swift */,
+				465F21762812426900B5A7FB /* RXDataSourceViewController.swift */,
+				465F2178281253B800B5A7FB /* RXCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -597,13 +606,16 @@
 				201B78A227DB321D005D76EF /* CustomNavigationController.swift in Sources */,
 				465F2165281017D200B5A7FB /* UIColor+Extension.swift in Sources */,
 				201B789F27DB1A88005D76EF /* FourthViewController.swift in Sources */,
+				465F21752811610400B5A7FB /* RXTableViewController.swift in Sources */,
 				201B789727DB1A45005D76EF /* ZABaseViewController.swift in Sources */,
+				465F21772812426900B5A7FB /* RXDataSourceViewController.swift in Sources */,
 				20B084C327DC773D002374E9 /* AdvertiseViewController.swift in Sources */,
 				201B789B27DB1A71005D76EF /* SecondViewController.swift in Sources */,
 				201B789527DB1A0B005D76EF /* ZATabBarController.swift in Sources */,
 				201B789D27DB1A7E005D76EF /* ThirdViewController.swift in Sources */,
 				465F216D2811365A00B5A7FB /* ThemeStyleConfig.swift in Sources */,
 				465F2163281006E900B5A7FB /* SecondTabCollectionViewCell.swift in Sources */,
+				465F2179281253B800B5A7FB /* RXCollectionViewController.swift in Sources */,
 				20B084BB27DC3A2C002374E9 /* ZADefine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

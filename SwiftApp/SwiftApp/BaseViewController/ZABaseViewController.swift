@@ -21,6 +21,17 @@ class ZABaseViewController: UIViewController {
 //        fatalError("init(coder:) has not been implemented")
 //    }
     
+    
+    
+    lazy var mainTable : UITableView = {
+        var tmpTable = UITableView()
+         tmpTable.rowHeight = 50
+         tmpTable.backgroundColor = .clear
+         tmpTable.separatorStyle = .none
+         tmpTable.frame = .init(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+         return tmpTable
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
