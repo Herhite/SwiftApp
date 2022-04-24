@@ -11,7 +11,18 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
+struct UserInfo {
+    var name : String
+    var password : String
+}
+
+protocol UsernameDelegate : NSObjectProtocol {
+    func getUserInfo(userInfo:UserInfo)
+}
+
 class TestViewController: ZABaseViewController {
+    
+    weak var delegate : UsernameDelegate?
     
     let minUsernameLength = 8
     let minPasswordLength = 8
@@ -100,14 +111,19 @@ class TestViewController: ZABaseViewController {
     }
     
     func showAlert(){
-        let alertView = UIAlertView(
-                title: "RxExample",
-                message: "This is wonderful",
-                delegate: nil,
-                cancelButtonTitle: "OK"
-            )
-
-            alertView.show()
+        let userinfo = UserInfo.init(name: nameTextF.text!, password: passwordTextF.text! )
+//        let alertView = UIAlertView(
+//                title: "RxExample",
+//                message: "This is wonderful",
+//                delegate: nil,
+//                cancelButtonTitle: "OK"
+//            )
+//
+//            alertView.show()
+        if self.delegate != nil && ((self.delegate?.responds(to: Selector.init(("getUserinfo")))) != nil) {
+            delegate?.getUserInfo(userInfo: userinfo)
+        }
+        navigationController?.popViewController(animated: true)
     }
     
     func setupUI(){

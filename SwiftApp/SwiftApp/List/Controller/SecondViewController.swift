@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JXSegmentedView
 
 class SecondViewController: ZABaseViewController {
 
@@ -14,6 +15,10 @@ class SecondViewController: ZABaseViewController {
 
         view.addSubview(collectionV)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        collectionV.frame = .init(x: 10, y: 0, width: SCREEN_WIDTH-20, height: view.frame.size.height)
     }
     
     lazy var collectionV :UICollectionView = {
@@ -72,4 +77,22 @@ extension SecondViewController:UICollectionViewDataSource,UICollectionViewDelega
     }
     
     
+}
+
+extension SecondViewController:JXSegmentedListContainerViewListDelegate{
+    func listView() -> UIView {
+        return view
+    }
+    func listDidAppear() {
+        
+    }
+    func listWillAppear() {
+        
+    }
+    func listDidDisappear() {
+        
+    }
+    func listWillDisappear() {
+        
+    }
 }

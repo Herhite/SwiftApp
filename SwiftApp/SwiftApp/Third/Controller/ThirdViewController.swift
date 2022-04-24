@@ -10,12 +10,17 @@ import SnapKit
 import RxCocoa
 import RxSwift
 import Alamofire
+import JXSegmentedView
 
 
 
 class ThirdViewController: ZABaseViewController {
     
     let label = UILabel(frame: CGRect.zero)
+    let titles = ["许嵩","其他歌手"]
+    var segmentSource: JXSegmentedTitleDataSource!
+    var segmentedView: JXSegmentedView!
+    var listContainerView: JXSegmentedListContainerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,38 @@ class ThirdViewController: ZABaseViewController {
             make.centerX.centerY.equalTo(view)
         }
         // Do any additional setup after loading the view.
+       
+        //1、初始化JXSegmentedView
+        segmentedView = JXSegmentedView()
+        segmentedView.delegate = self
+        view.addSubview(segmentedView)
+        
+        segmentSource = JXSegmentedTitleDataSource()
+        segmentSource.titles = titles
+        segmentSource.isTitleZoomEnabled = true
+        segmentSource.isTitleColorGradientEnabled = true
+        segmentedView.dataSource = segmentSource;
+        
+        let indicator = JXSegmentedIndicatorLineView()
+        indicator.indicatorWidth = 20
+        segmentedView.indicators = [indicator]
+        
+        //5、初始化JXSegmentedListContainerView
+        listContainerView = JXSegmentedListContainerView(dataSource: self)
+        view.addSubview(listContainerView)
+        
+        //6、将listContainerView.scrollView和segmentedView.contentScrollView进行关联
+        segmentedView.listContainer = listContainerView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        segmentedView.frame = CGRect(x: 0, y: SAFE_TOP_HEIGHT, width: view.bounds.size.width, height: 50)
+        listContainerView.frame = CGRect(x: 0, y: SAFE_TOP_HEIGHT+50, width: view.bounds.size.width, height: SCREEN_HEIGHT - 50 - SAFE_TOP_HEIGHT - TABBAR_HEIGHT)
+    }
+    
+    func rxswift() {
         
 //        let observable = Observable.repeatElement(1).subscribe { Event in
 //            print(Event)
@@ -107,7 +144,6 @@ class ThirdViewController: ZABaseViewController {
             
         }
     }
-    
 
     /*
     // MARK: - Navigation
@@ -120,3 +156,21 @@ class ThirdViewController: ZABaseViewController {
     */
 
 }
+
+extension ThirdViewController:JXSegmentedViewDelegate,JXSegmentedListContainerViewDataSource{
+    func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
+           return segmentSource.dataSource.count
+       }
+
+       func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
+           if index == 1 {
+               let vc = SecondViewController()
+               return vc
+           }else{
+               let vc = RXCollectionViewController()
+               return vc
+           }
+       }
+}
+
+

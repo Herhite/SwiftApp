@@ -25,7 +25,7 @@ let SAFE_TOP_HEIGHT = STATUSBAR_HIGH + NAV_HIGH
 let TABBAR_HEIGHT = is_iPhoneXSeries() ? 83.0 : 49.0;
  
 // tabbar 安全区域的高度
-let TABBAR_HEIGHT_SAFE = is_iPhoneXSeries() ? 34.0 : 0.0;
+let SAFE_BOTTOM_HEIGHT = is_iPhoneXSeries() ? 34.0 : 0.0;
  
  
 // AppDelegate

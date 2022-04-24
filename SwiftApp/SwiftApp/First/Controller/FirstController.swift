@@ -9,7 +9,18 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FirstController: ZABaseViewController {
+class FirstController: ZABaseViewController, UsernameDelegate {
+    func getUserInfo(userInfo: UserInfo) {
+        let alertView = UIAlertView(
+            title: "Protocol\(userInfo.name)",
+            message: "This is password \(userInfo.password)",
+                delegate: nil,
+                cancelButtonTitle: "OK"
+            )
+
+            alertView.show()
+    }
+    
 
     let disposeBag = DisposeBag()
     let musicListViewModel = MusicListViewModel()
@@ -49,7 +60,8 @@ class FirstController: ZABaseViewController {
             .disposed(by: disposeBag)
         table.rx.modelSelected(Music.self)
             .subscribe(onNext:{ (model) in
-                print("点击了\(model.name):\(model.singer)")
+//                print("点击了\(model.name):\(model.singer)")
+                self.pushTestVc()
             })
             .disposed(by: disposeBag)
         
@@ -154,6 +166,11 @@ class FirstController: ZABaseViewController {
         navigationController?.pushViewController(testVc, animated: true)
     }
     
+    func pushTestVc(){
+        let testVc = TestViewController()
+        testVc.delegate = self
+        navigationController?.pushViewController(testVc, animated: true)
+    }
 
     /*
     // MARK: - Navigation

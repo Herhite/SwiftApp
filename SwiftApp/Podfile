@@ -17,6 +17,8 @@ target 'SwiftApp' do
   pod 'MJRefresh'
   pod 'RxSwift'#, '~> 5.0'
   pod 'RxCocoa'#, '~> 5.0'
+  pod 'RxDataSources'
+  pod 'JXSegmentedView'
   
   target 'SwiftAppTests' do
     inherit! :search_paths

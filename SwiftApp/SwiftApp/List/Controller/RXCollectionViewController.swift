@@ -8,10 +8,13 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import JXSegmentedView
+import MJRefresh
+import RxDataSources
 
 class RXCollectionViewController: ZABaseViewController {
     
-    let musicModel = MusicCollectionViewModel()
+    var musicModel = MusicCollectionViewModel()
     let disposeBag = DisposeBag()
     let reuseID = "reuseVae"
     
@@ -28,6 +31,12 @@ class RXCollectionViewController: ZABaseViewController {
          .disposed(by: disposeBag)
     }
     
+    override func viewDidLayoutSubviews() {
+//        collectionV.frame = .init(x: 10, y: 0, width: SCREEN_WIDTH-20, height: view.frame.size.height)
+        collectionV.frame = .init(x: 10, y: 0, width: SCREEN_WIDTH-20, height: SCREEN_HEIGHT - SAFE_TOP_HEIGHT - 50 - TABBAR_HEIGHT)
+        print(collectionV.frame)
+    }
+    
     lazy var collectionV :UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let width = (SCREEN_WIDTH - 40)/3
@@ -35,7 +44,7 @@ class RXCollectionViewController: ZABaseViewController {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10;
         layout.minimumInteritemSpacing = 10;
-        let tmpCV = UICollectionView.init(frame: .init(x: 10, y: 0, width: SCREEN_WIDTH-20, height: SCREEN_HEIGHT), collectionViewLayout: layout)
+        let tmpCV = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
 //        tmpCV.delegate = self
 //        tmpCV.dataSource = self
         tmpCV.showsVerticalScrollIndicator = false
@@ -53,4 +62,22 @@ class RXCollectionViewController: ZABaseViewController {
     }
     */
 
+}
+
+extension RXCollectionViewController:JXSegmentedListContainerViewListDelegate{
+    func listView() -> UIView {
+        return view
+    }
+    func listDidAppear() {
+        
+    }
+    func listWillAppear() {
+        
+    }
+    func listDidDisappear() {
+        
+    }
+    func listWillDisappear() {
+        
+    }
 }
